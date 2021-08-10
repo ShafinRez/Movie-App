@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+.Scrollable {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  
+}
+
+.Movie {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid green;
+  width: 200px;
+  height: 250px;
+  background-color: gray;
+}
