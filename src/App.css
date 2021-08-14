@@ -45,8 +45,6 @@
   display: flex;
   flex-direction: row;
   overflow-x: auto;
-  /* flex-wrap: nowrap; */
-  /* justify-content: space-evenly; */
   background-color: lightgray;
 }
 
