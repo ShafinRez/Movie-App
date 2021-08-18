@@ -47,7 +47,7 @@
 
 .Movie {
   border: 5px solid blue;
-  min-width: 200px;
+  min-width: 175px;
   height: 250px;
   background-color: gray;
   text-align: center;

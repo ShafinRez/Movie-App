@@ -26,9 +26,22 @@ const Scrollable = ({ title }) => {
 					},
 				]}
 				breakpoints={{
-					1224: {
+					640: {
 						plugins:
 							[
+								'arrows',
+								{
+									resolve: slidesToShowPlugin,
+									options: {
+										numberOfSlides: 1
+									}
+								},
+							]
+					},
+					1080: {
+						plugins:
+							[
+								'arrows',
 								{
 									resolve: slidesToShowPlugin,
 									options: {
@@ -54,7 +67,7 @@ const Scrollable = ({ title }) => {
 }
 
 Scrollable.defaultProps = {
-	title: "TITLEMISSING"
+	title: "TITLE MISSING"
 }
 
 export default Scrollable
