@@ -1,9 +1,10 @@
 import React from 'react'
 import Movie from './Movie';
+
 import Carousel, { slidesToShowPlugin } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 
-const Scrollable = () => {
+const Scrollable = ({ title }) => {
 
 	// const isDesktopOrLaptop = useMediaQuery({ minWidth: 1224 })
 	// const isBigScreen = useMediaQuery({ minWidth: 1824 })
@@ -13,7 +14,7 @@ const Scrollable = () => {
 
 	return (
 		<div>
-			<h2> Top Hits </h2>
+			<h2> {title} </h2>
 			<Carousel
 				plugins={[
 					'arrows',
@@ -50,6 +51,10 @@ const Scrollable = () => {
 			</Carousel>
 		</div>
 	);
+}
+
+Scrollable.defaultProps = {
+	title: "TITLEMISSING"
 }
 
 export default Scrollable

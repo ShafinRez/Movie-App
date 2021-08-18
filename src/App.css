@@ -42,10 +42,7 @@
 }
 
 .Scrollable {
-  display: flex;
-  flex-direction: row;
-  overflow-x: auto;
-  background-color: lightgray;
+  background-color: green;
 }
 
 .Movie {
@@ -54,4 +51,5 @@
   height: 250px;
   background-color: gray;
   text-align: center;
+  border-radius: 20px;
 }
