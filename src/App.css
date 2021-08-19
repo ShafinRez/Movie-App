@@ -42,7 +42,8 @@
 }
 
 .Scrollable {
-  background-color: green;
+  background-color:	lightcoral;
+  border-radius: 50px;
 }
 
 .Movie {
@@ -52,4 +53,8 @@
   background-color: gray;
   text-align: center;
   border-radius: 20px;
+}
+
+.MiddleTitle {
+	text-align: center;
 }

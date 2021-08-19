@@ -13,8 +13,8 @@ const Scrollable = ({ title }) => {
 	// const isRetina = useMediaQuery({ minResolution: '2dppx' })
 
 	return (
-		<div>
-			<h2> {title} </h2>
+		<div className="Scrollable">
+			<h2 className="MiddleTitle"> {title} </h2>
 			<Carousel
 				plugins={[
 					'arrows',
