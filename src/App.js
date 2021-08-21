@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Scrollable from './components/Scrollable';
+import Scrollable from './components/scrollable';
 
 function App() {
 	return (
