@@ -1,6 +1,9 @@
 import React from "react";
 import Movie from "./Movie";
-import Carousel, { slidesToShowPlugin } from "@brainhubeu/react-carousel";
+import Carousel, {
+    slidesToShowPlugin,
+    slidesToScrollPlugin,
+} from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 
 const Scrollable = ({ title }) => {
@@ -16,6 +19,12 @@ const Scrollable = ({ title }) => {
                             numberOfSlides: 5,
                         },
                     },
+                    {
+                        resolve: slidesToScrollPlugin,
+                        options: {
+                            numberOfSlides: 5,
+                        },
+                    },
                 ]}
                 breakpoints={{
                     640: {
@@ -27,6 +36,12 @@ const Scrollable = ({ title }) => {
                                     numberOfSlides: 1,
                                 },
                             },
+                            {
+                                resolve: slidesToScrollPlugin,
+                                options: {
+                                    numberOfSlides: 1,
+                                },
+                            },
                         ],
                     },
                     1080: {
@@ -34,6 +49,12 @@ const Scrollable = ({ title }) => {
                             "arrows",
                             {
                                 resolve: slidesToShowPlugin,
+                                options: {
+                                    numberOfSlides: 3,
+                                },
+                            },
+                            {
+                                resolve: slidesToScrollPlugin,
                                 options: {
                                     numberOfSlides: 3,
                                 },
