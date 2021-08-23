@@ -3,6 +3,7 @@ import Movie from "./Movie";
 import Carousel, {
     slidesToShowPlugin,
     slidesToScrollPlugin,
+    infinitePlugin
 } from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 
@@ -25,6 +26,12 @@ const Scrollable = ({ title }) => {
                             numberOfSlides: 5,
                         },
                     },
+                    {
+                        resolve: infinitePlugin,
+                        options: {
+                          numberOfInfiniteClones: 1,
+                        },
+                    },
                 ]}
                 breakpoints={{
                     640: {
@@ -42,6 +49,12 @@ const Scrollable = ({ title }) => {
                                     numberOfSlides: 1,
                                 },
                             },
+                            {
+                                resolve: infinitePlugin,
+                                options: {
+                                  numberOfInfiniteClones: 1,
+                                },
+                            },
                         ],
                     },
                     1080: {
@@ -57,6 +70,12 @@ const Scrollable = ({ title }) => {
                                 resolve: slidesToScrollPlugin,
                                 options: {
                                     numberOfSlides: 3,
+                                },
+                            },
+                            {
+                                resolve: infinitePlugin,
+                                options: {
+                                  numberOfInfiniteClones: 1,
                                 },
                             },
                         ],
