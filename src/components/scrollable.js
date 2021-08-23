@@ -14,6 +14,7 @@ const Scrollable = ({ title }) => {
             <Carousel
                 plugins={[
                     "arrows",
+                    "infinite",
                     {
                         resolve: slidesToShowPlugin,
                         options: {
@@ -26,17 +27,12 @@ const Scrollable = ({ title }) => {
                             numberOfSlides: 5,
                         },
                     },
-                    {
-                        resolve: infinitePlugin,
-                        options: {
-                          numberOfInfiniteClones: 1,
-                        },
-                    },
                 ]}
                 breakpoints={{
                     640: {
                         plugins: [
                             "arrows",
+                            "infinite",
                             {
                                 resolve: slidesToShowPlugin,
                                 options: {
@@ -47,12 +43,6 @@ const Scrollable = ({ title }) => {
                                 resolve: slidesToScrollPlugin,
                                 options: {
                                     numberOfSlides: 1,
-                                },
-                            },
-                            {
-                                resolve: infinitePlugin,
-                                options: {
-                                  numberOfInfiniteClones: 1,
                                 },
                             },
                         ],
@@ -60,6 +50,7 @@ const Scrollable = ({ title }) => {
                     1080: {
                         plugins: [
                             "arrows",
+                            "infinite",
                             {
                                 resolve: slidesToShowPlugin,
                                 options: {
@@ -70,12 +61,6 @@ const Scrollable = ({ title }) => {
                                 resolve: slidesToScrollPlugin,
                                 options: {
                                     numberOfSlides: 3,
-                                },
-                            },
-                            {
-                                resolve: infinitePlugin,
-                                options: {
-                                  numberOfInfiniteClones: 1,
                                 },
                             },
                         ],
