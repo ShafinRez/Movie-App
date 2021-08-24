@@ -37,24 +37,19 @@
   }
 }
 
-.Scrollable::-webkit-scrollbar{
+.Scrollable::-webkit-scrollbar {
   width: 0px;
 }
 
 .Scrollable {
-  background-color:	lightcoral;
-  border-radius: 50px;
+  background-color: lightcoral;
+  border-radius: 20px;
 }
 
-.Movie {
-  border: 5px solid blue;
-  min-width: 175px;
-  height: 250px;
-  background-color: gray;
-  text-align: center;
+img {
   border-radius: 20px;
 }
 
 .MiddleTitle {
-	text-align: center;
+  text-align: center;
 }
