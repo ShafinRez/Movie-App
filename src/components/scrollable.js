@@ -3,7 +3,8 @@ import Movie from './Movie';
 
 import Carousel, { slidesToShowPlugin } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
-
+import {useEffect, useState} from "react";
+const movie_API = "https://api.themoviedb.org/3/movie/550?api_key=702913c155a3e7036e088e1afbfdcc9d";
 const Scrollable = ({ title }) => {
 
 	// const isDesktopOrLaptop = useMediaQuery({ minWidth: 1224 })
@@ -11,9 +12,16 @@ const Scrollable = ({ title }) => {
 	// const isTabletOrMobile = useMediaQuery({ maxWidth: 1224 })
 	// const isPortrait = useMediaQuery({ orientation: 'portrait' })
 	// const isRetina = useMediaQuery({ minResolution: '2dppx' })
-
+	
+	const [movies, setMovies] = useState([]);
+	useEffect(()=> {
+		fetch(movie_API).then((res) => res.json()).then((data) =>{
+			setMovies(data.results);
+		});
+	},[])
 	return (
 		<div className="Scrollable">
+			
 			<h2 className="MiddleTitle"> {title} </h2>
 			<Carousel
 				plugins={[
@@ -53,14 +61,8 @@ const Scrollable = ({ title }) => {
 				}}
 			>
 				{/* put all in ul, each Movie is in an li, change css ul in className*/}
-				<Movie name="Movie 1" />
-				<Movie name="Movie 2" />
-				<Movie name="Movie 3" />
-				<Movie name="Movie 4" />
-				<Movie name="Movie 5" />
-				<Movie name="Movie 6" />
-				<Movie name="Movie 7" />
-				<Movie name="Movie 8" />
+				{movies.length > 0 && movies.map((movie) => <Movie key ={movie.id} {...movie}/>)}
+				
 			</Carousel>
 		</div>
 	);
