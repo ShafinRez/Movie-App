@@ -1,16 +1,17 @@
 import React from "react";
-import propTypes from "prop-types";
+const IMG_API = "https://image.tmdb.org/t/p/w500";
 
-const Movie = (props) => {
-    return (
-        <div className="Movie">
-            <h1 className="MovieText">{props.name}</h1>
-        </div>
-    );
+const Movie = ({ data }) => {
+  // console.log(data)
+  return (
+    <div>
+      <img src={IMG_API + data.poster_path} alt="" width="175" height="250" />
+    </div>
+  );
 };
 
-Movie.propTypes = {
-    name: propTypes.string.isRequired,
-};
+// Movie.propTypes = {
+//     name: propTypes.string.isRequired
+// }
 
 export default Movie;
